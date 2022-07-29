@@ -16,15 +16,12 @@
     padding: 10px;
     background-color: #438dfc;
     border-radius: 12px;
-
   }
 }
-.background {
-  background-image: url('/main.png');
-  background-size: cover;
-  @media screen and (max-width: 385px) {
-    margin-top: 200px;
-  }
+
+.textGradient {
+  font-size: 55px;
+  -webkit-background-clip: text !important;
 }
 
 .controls {
@@ -42,27 +39,24 @@
     font-weight: 600;
     font-size: 15px;
   }
-  .flexColor {
-    display: flex;
-    margin: 0;
-    input[type='color'] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 220px;
-      height: 40px;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
-    input[type='color']::-webkit-color-swatch {
-      border-radius: 5px;
-      border: none;
-    }
-    input[type='color']::-moz-color-swatch {
-      border-radius: 15px;
-      border: none;
-    }
+
+  input[type='color'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 220px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  input[type='color']::-webkit-color-swatch {
+    border-radius: 5px;
+    border: none;
+  }
+  input[type='color']::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
   }
 }
 
@@ -78,7 +72,7 @@
 
   .textarea {
     width: 300px;
-    height: 100px;
+    height: 140px;
     background-color: #fff;
     color: #096ffe;
     font-weight: 600;

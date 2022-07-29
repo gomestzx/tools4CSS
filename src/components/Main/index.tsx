@@ -11,7 +11,7 @@ export default function Main() {
   const [color, setColor] = useState<string>('#096FFE');
 
   const Redirect = () => {
-    router.push('/tools/glassmorphism');
+    router.push('/tools/neumorphism');
   };
 
   interface IHexToRGBA {

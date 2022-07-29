@@ -4,6 +4,7 @@
   --moz-backdrop-filter: blur(0px);
   background-color: #438dfc;
   height: 100vh;
+
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -23,9 +24,6 @@
     font-family: 'Poppins', sans-serif;
     text-align: start;
     padding: 8px 50px;
-    :hover {
-      color: #623cea;
-    }
   }
   .footer {
     bottom: 0;

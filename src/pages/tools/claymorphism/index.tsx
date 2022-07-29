@@ -1,22 +1,22 @@
 import type { NextPage } from 'next';
-import Glassmorphism from '../../../components/Glassmorphism';
+import Claymorphism from '../../../components/Claymophism';
 import HeaderMobile from '../../../components/HeaderMobile';
 import { SEO } from '../../../components/SEO';
 
-
 import Sidebar from '../../../components/Sidebar';
 
-const glassmorphism: NextPage = () => {
+
+const claymorphism: NextPage = () => {
   return (
     <div>
       <HeaderMobile />
-      <SEO title='Glassmorphism' />
+      <SEO title='Claymorphism' />
       <div className='grid'>
         <Sidebar />
-        <Glassmorphism />
+        <Claymorphism />
       </div>
     </div>
   );
 };
 
-export default glassmorphism;
+export default claymorphism;

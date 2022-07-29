@@ -1,22 +1,20 @@
-import type { NextPage } from 'next';
-import Glassmorphism from '../../../components/Glassmorphism';
+import React from 'react';
 import HeaderMobile from '../../../components/HeaderMobile';
+import Neumorphism from '../../../components/Neumorphism';
 import { SEO } from '../../../components/SEO';
-
-
 import Sidebar from '../../../components/Sidebar';
 
-const glassmorphism: NextPage = () => {
+const neumorphism = () => {
   return (
-    <div>
+    <>
+      <SEO title='Neumorphism' />
       <HeaderMobile />
-      <SEO title='Glassmorphism' />
       <div className='grid'>
         <Sidebar />
-        <Glassmorphism />
+        <Neumorphism />
       </div>
-    </div>
+    </>
   );
 };
 
-export default glassmorphism;
+export default neumorphism;

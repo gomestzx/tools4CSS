@@ -7,6 +7,17 @@
   @media only screen and (max-width: 1250px) {
     width: 100vw;
   }
+  input[type='checkbox'] {
+    visibility: hidden;
+    &:checked + label {
+      transform: rotate(360deg);
+      background-color: #000;
+      &:before {
+        transform: translateX(90px);
+        background-color: #fff;
+      }
+    }
+  }
 
   .flex {
     display: flex;
@@ -16,7 +27,6 @@
     padding: 10px;
     background-color: #438dfc;
     border-radius: 12px;
-
   }
 }
 .background {
@@ -30,6 +40,7 @@
 .controls {
   background-color: #438dfc;
   padding: 20px;
+  width: 220px;
   @media screen and (max-width: 840px) {
     padding: 20px 50px;
   }
@@ -41,28 +52,6 @@
     color: #fff;
     font-weight: 600;
     font-size: 15px;
-  }
-  .flexColor {
-    display: flex;
-    margin: 0;
-    input[type='color'] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 220px;
-      height: 40px;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
-    input[type='color']::-webkit-color-swatch {
-      border-radius: 5px;
-      border: none;
-    }
-    input[type='color']::-moz-color-swatch {
-      border-radius: 15px;
-      border: none;
-    }
   }
 }
 

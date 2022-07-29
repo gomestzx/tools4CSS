@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import style from './styles.module.scss';
 
+
 const Sidebar = () => {
   return (
     <div className={style.sidebar}>
@@ -10,19 +11,19 @@ const Sidebar = () => {
         <Image src='/logo-white.png' alt='' width={190} height={60} />
       </div>
       <div className={style.link}>
+        <Link href='/tools/neumorphism'>Neumorphism</Link>
+      </div>
+      <div className={style.link}>
         <Link href='/tools/glassmorphism'>Glassmorphism</Link>
       </div>
       <div className={style.link}>
-        <Link href='/teste'>Neumorphism</Link>
+        <Link href='/tools/claymorphism'>Claymorphism</Link>
       </div>
       <div className={style.link}>
-        <Link href='/tools/background-gradient'>Background Gradient</Link>
-      </div>
-      <div className={style.link}>
-        <Link href='/teste'>Text Gradient</Link>
+        <Link href='/tools/text-gradient'>Text Gradient</Link>
       </div>
       <div className={style.footer}>
-        Made with ❤️ by <span>gomestzx</span>
+        Made with ❤️ by <span><Link href='https://gomestzx.github.io'>gomestzx</Link></span>
       </div>
     </div>
   );
