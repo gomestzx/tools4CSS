@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import React, { useEffect } from "react";
+import Router from "next/router";
 
 const Tools = () => {
-    const router = useRouter()
-    useEffect(() => {router.push('/tools/neumorphism')}, [])
-  return (
-    <></>
-  )
-}
+  //...
+  useEffect(() => {
+    const { pathname } = Router;
+    if (pathname === "/tools") {
+      Router.push("/tools/neumorphism");
+    }
+  });
+  //...
+};
 
-export default Tools
+export default Tools;

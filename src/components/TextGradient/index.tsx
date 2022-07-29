@@ -26,7 +26,6 @@ const Background = () => {
               WebkitBackgroundClip: 'text',
               color: 'transparent',
               backgroundClip: 'text',
-              background: `-webkit-linear-gradient(to left, ${color1}, ${color2})`,
               background: `linear-gradient(to right, ${color1}, ${color2})`,
             }}
           >
