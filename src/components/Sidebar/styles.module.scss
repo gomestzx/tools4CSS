@@ -1,0 +1,48 @@
+.sidebar {
+  backdrop-filter: blur(0px);
+  --webkit-backdrop-filter: blur(0px);
+  --moz-backdrop-filter: blur(0px);
+  background-color: #438dfc;
+  height: 100vh;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    margin-bottom: 100px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: start;
+    padding: 8px 50px;
+    :hover {
+      color: #623cea;
+    }
+  }
+  .footer {
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+    span {
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .sidebar {
+    display: none;
+  }
+}

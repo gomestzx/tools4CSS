@@ -1,0 +1,66 @@
+.app {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .background {
+    .container {
+      width: 700px;
+    }
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 100px;
+    padding: 10px;
+  }
+}
+
+.controls {
+  background-color: #e8e2fc;
+  padding: 20px;
+  .colorPicker {
+    margin: 10px;
+  }
+  @media screen and (max-width: 840px) {
+    padding: 20px 50px;
+  }
+  .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    color: #623cea;
+    font-weight: 600;
+    font-size: 15px;
+  }
+}
+
+.slider {
+  max-width: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.cssCopy {
+  background-color: #e8e2fc;
+  padding: 20px;
+
+  .textarea {
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    color: #623cea;
+    font-weight: 900;
+  }
+  button {
+    background-color: #623cea;
+    border: 0px;
+    width: 300px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}
