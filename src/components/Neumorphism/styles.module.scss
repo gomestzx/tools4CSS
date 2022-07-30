@@ -32,9 +32,6 @@
 .background {
   background-image: url('/main.png');
   background-size: cover;
-  @media screen and (max-width: 385px) {
-    margin-top: 200px;
-  }
 }
 
 .controls {
@@ -42,7 +39,7 @@
   padding: 20px;
   width: 220px;
   @media screen and (max-width: 840px) {
-    padding: 20px 50px;
+    padding: 10px;
   }
   .label {
     display: flex;

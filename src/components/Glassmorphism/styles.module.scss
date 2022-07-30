@@ -22,16 +22,14 @@
 .background {
   background-image: url('/main.png');
   background-size: cover;
-  @media screen and (max-width: 385px) {
-    margin-top: 200px;
-  }
+ 
 }
 
 .controls {
   background-color: #438dfc;
   padding: 20px;
   @media screen and (max-width: 840px) {
-    padding: 20px 50px;
+    padding: 10px;
   }
   .label {
     display: flex;

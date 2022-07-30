@@ -14,13 +14,13 @@ export default function HeaderApp() {
       </label>
       <ul className={styles.menu}>
         <li>
-          <Link href='/tools/glassmorphism'>Tools</Link>
+          <Link href='/tools/neumorphism'>Tools</Link>
         </li>
         <li>
-          <Link href='#faqs'>About</Link>
+          <Link href='#about'>About</Link>
         </li>
         <li>
-          <Link href='/tools/background-gradient'>Blog</Link>
+          <Link href='#blog'>Blog</Link>
         </li>
         <li>
           <Link href='#contact'>Contact</Link>

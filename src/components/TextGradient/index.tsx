@@ -5,8 +5,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Background = () => {
   const [color1, setColor1] = useState<string>('#12C2E9');
-  const [color2, setColor2] = useState<string>('#f64f59');
-  const [background, setBackground] = useState<string>('#143D67')
+  const [color2, setColor2] = useState<string>('#d954c8');
+  const [background, setBackground] = useState<string>('#f2f4f6')
   const [text, setText] = useState<string>('COPY');
   const Copy = () => {
     setText('COPIED 🎉');

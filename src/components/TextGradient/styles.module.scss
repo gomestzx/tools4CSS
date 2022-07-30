@@ -20,8 +20,12 @@
 }
 
 .textGradient {
-  font-size: 55px;
+  font-size: 75px;
+  margin: 10px;
   -webkit-background-clip: text !important;
+  @media screen and (max-width: 840px) {
+    font-size: 55px;
+  }
 }
 
 .controls {

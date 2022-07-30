@@ -39,18 +39,18 @@
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 40px 20px;
     position: relative;
     user-select: none;
     .navicon {
-      background: #623cea;
+      background: #096ffe;
       display: block;
       height: 2px;
       position: relative;
       transition: background 0.2s ease-out;
       width: 18px;
       &:before {
-        background: #623cea;
+        background: #096ffe;
         content: '';
         display: block;
         height: 100%;
@@ -60,7 +60,7 @@
         top: 5px;
       }
       &:after {
-        background: #623cea;
+        background: #096ffe;
         content: '';
         display: block;
         height: 100%;
