@@ -3,10 +3,11 @@ import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-const Background = () => {
+const TextGradiemt = () => {
   const [color1, setColor1] = useState<string>('#12C2E9');
   const [color2, setColor2] = useState<string>('#d954c8');
   const [background, setBackground] = useState<string>('#f2f4f6')
+  const [direction, setDirection] = useState<string>('to top')
   const [text, setText] = useState<string>('COPY');
   const Copy = () => {
     setText('COPIED 🎉');
@@ -26,7 +27,7 @@ const Background = () => {
               WebkitBackgroundClip: 'text',
               color: 'transparent',
               backgroundClip: 'text',
-              background: `linear-gradient(to right, ${color1}, ${color2})`,
+              background: `linear-gradient(${direction}, ${color1}, ${color2})`,
             }}
           >
             Tools4CSS
@@ -65,16 +66,25 @@ const Background = () => {
               value={background}
             />
           </div>
+          <div className={style.directions}>
+          <div className={style.label}>
+              <span>Directions </span>
+            </div>
+            <button onClick={() => setDirection('to top')}>👆</button>
+            <button onClick={() => setDirection('to bottom')}>👇</button>
+            <button onClick={() => setDirection('to left')}>👈</button>
+            <button onClick={() => setDirection('to right')}>👉</button>
+          </div>
         </div>
         <div className={style.cssCopy}>
           <textarea
             className={style.textarea}
-            value={`background: -webkit-linear-gradient(to right, ${color1}, ${color2});\nbackground: linear-gradient(to right, ${color1}, ${color2});\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;`}
+            value={`background: -webkit-linear-gradient(${direction}, ${color1}, ${color2});\nbackground: linear-gradient(to right, ${color1}, ${color2});\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;`}
             readOnly
           ></textarea>
           <br />
           <CopyToClipboard
-            text={`background: -webkit-linear-gradient(to right, ${color1}, ${color2});\nbackground: linear-gradient(to right, ${color1}, ${color2});\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;`}
+            text={`background: -webkit-linear-gradient(${direction}, ${color1}, ${color2});\nbackground: linear-gradient(to right, ${color1}, ${color2});\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;`}
           >
             <button onClick={() => Copy()}>{text}</button>
           </CopyToClipboard>
@@ -84,4 +94,4 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default TextGradiemt;

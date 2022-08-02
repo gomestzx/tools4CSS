@@ -7,16 +7,24 @@
   @media only screen and (max-width: 1250px) {
     width: 100vw;
   }
-  input[type='checkbox'] {
-    visibility: hidden;
-    &:checked + label {
-      transform: rotate(360deg);
-      background-color: #000;
-      &:before {
-        transform: translateX(90px);
-        background-color: #fff;
-      }
-    }
+
+  input[type='color'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 220px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  input[type='color']::-webkit-color-swatch {
+    border-radius: 5px;
+    border: none;
+  }
+  input[type='color']::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
   }
 
   .flex {
@@ -64,7 +72,7 @@
 
   .textarea {
     width: 300px;
-    height: 100px;
+    height: 120px;
     background-color: #fff;
     color: #096ffe;
     font-weight: 600;

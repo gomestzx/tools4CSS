@@ -10,7 +10,7 @@ const Sidebar = () => {
         <Image src='/logo-white.png' alt='' width={190} height={60} />
       </div>
       <div className={style.textLogo}>
-       <h1>Tools4CSS</h1>
+        <h1>Tools4CSS</h1>
       </div>
       <div className={style.links}>
         <Link href='/tools/neumorphism'>
@@ -41,21 +41,19 @@ const Sidebar = () => {
             </div>
           </div>
         </Link>
-        <Link href='/tools/text-gradient'>
+        <Link href='/tools/background-gradient'>
           <div className={style.row}>
             <div className={style.text}>
-              <div className={style.link}>Text Gradient</div>
+              <div className={style.link}>Background Gradient</div>
             </div>
           </div>
         </Link>
-
-        
       </div>
 
       <div className={style.footer}>
-        Made with ❤️ by{' '}
+        Made with ❤️ by
         <span>
-          <Link href='https://gomestzx.github.io'>gomestzx</Link>
+          <Link href='https://gomestzx.github.io'> gomestzx</Link>
         </span>
       </div>
     </div>

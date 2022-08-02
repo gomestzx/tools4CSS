@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Image from 'next/image';
+
 
 const Neumorphism = () => {
-  const [blur, setBlur] = useState<number>(8);
-
+  const [blur, setBlur] = useState<number>(38);
+  const [background, setBackground] = useState<string>('#F2F4F6');
   const [text, setText] = useState<string>('COPY');
   const [distance, setDistance] = useState<number>(10);
-  const [borderRadius, setBorderRadius] = useState<number>(12);
+  const [borderRadius, setBorderRadius] = useState<number>(25);
   const Copy = () => {
     setText('COPIED 🎉');
     setTimeout(() => {
@@ -17,18 +19,20 @@ const Neumorphism = () => {
   };
 
   return (
-    <div className={style.app}>
-      <div className={style.background}>
+    <div className={style.app} style={{backgroundColor: `${background}`}}>
+      <div className={style.background} >
         <div
           className={style.container}
           style={{
             width: '300px',
             height: '320px',
-            backgroundColor: 'rgba(142, 209, 252, 0.15)',
+            background: `${background}`,
             borderRadius: `${borderRadius}px`,
             boxShadow: `${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff`,
           }}
-        ></div>
+        >
+          <Image src='/main.png' width={320} height={320} alt='Main'/>
+        </div>
       </div>
       <div className={style.flex}>
         <div className={style.controls}>
@@ -53,6 +57,7 @@ const Neumorphism = () => {
             defaultValue={30}
             className={style.slider}
           />
+          <div>
           <div className={style.label}>
             <span>Border Radius</span>
             <span> {borderRadius}</span>
@@ -64,16 +69,17 @@ const Neumorphism = () => {
             className={style.slider}
             max={60}
           />
+          </div>
         </div>
         <div className={style.cssCopy}>
           <textarea
             className={style.textarea}
-            value={`boxShadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
+            value={`boxShadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nbackground: ${background};\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
             readOnly
           ></textarea>
           <br />
           <CopyToClipboard
-            text={`boxShadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
+            text={`boxShadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nbackground: ${background};\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
           >
             <button onClick={() => Copy()}>{text}</button>
           </CopyToClipboard>
