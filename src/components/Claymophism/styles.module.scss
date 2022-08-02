@@ -1,99 +1,101 @@
 .app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  @media only screen and (max-width: 1250px) {
+    width: 100vw;
+  }
+
+  .flex {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 100px;
+    padding: 10px;
+    background-color: #438dfc;
+    border-radius: 12px;
+  }
+}
+.background {
+  background-image: url('/main.png');
+  background-size: cover;
+  @media screen and (max-width: 385px) {
+    margin-top: 200px;
+  }
+}
+
+.controls {
+  background-color: #438dfc;
+  padding: 20px;
+  @media screen and (max-width: 840px) {
+    padding: 10px;
+  }
+  .label {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    width: 80vw;
-    @media only screen and (max-width: 1250px) {
-      width: 100vw;
-    }
-  
-    .flex {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 10px 100px;
-      padding: 10px;
-      background-color: #438dfc;
-      border-radius: 12px;
-  
-    }
-  }
-  .background {
-    background-image: url('/main.png');
-    background-size: cover;
-    @media screen and (max-width: 385px) {
-      margin-top: 200px;
-    }
-  }
-  
-  .controls {
-    background-color: #438dfc;
-    padding: 20px;
-    @media screen and (max-width: 840px) {
-      padding: 10px;
-    }
-    .label {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 200px;
-      color: #fff;
-      font-weight: 600;
-      font-size: 15px;
-    }
-    .flexColor {
-      display: flex;
-      margin: 0;
-      input[type='color'] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        width: 220px;
-        height: 40px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-      }
-      input[type='color']::-webkit-color-swatch {
-        border-radius: 5px;
-        border: none;
-      }
-      input[type='color']::-moz-color-swatch {
-        border-radius: 15px;
-        border: none;
-      }
-    }
-  }
-  
-  .slider {
     max-width: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
-    color: #fff !important;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
   }
-  .cssCopy {
-    background-color: #438dfc;
-    padding: 20px;
-  
-    .textarea {
-      width: 300px;
-      height: 170px;
-      background-color: #fff;
-      color: #096ffe;
-      font-weight: 600;
-      margin-top: 10px;
-      font-family: 'Poppins';
-      font-size: 12px;
-    }
-    button {
-      background-color: #0f54b4;
-      border: 0px;
-      width: 300px;
-      color: #fff;
-      padding: 10px 20px;
+  .flexColor {
+    display: flex;
+    margin: 0;
+    input[type='color'] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 220px;
+      height: 40px;
+      background-color: transparent;
+      border: none;
       cursor: pointer;
-      font-family: 'Poppins';
+    }
+    input[type='color']::-webkit-color-swatch {
+      border-radius: 5px;
+      border: none;
+    }
+    input[type='color']::-moz-color-swatch {
+      border-radius: 15px;
+      border: none;
     }
   }
-  
+}
+
+.slider {
+  max-width: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #fff !important;
+}
+.cssCopy {
+  background-color: #438dfc;
+  padding: 20px;
+
+  .textarea {
+    width: 300px;
+    height: 170px;
+    background-color: #fff;
+    color: #096ffe;
+    font-weight: 600;
+    margin-top: 10px;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+    font-size: 12px;
+  }
+  button {
+    background-color: #0f54b4;
+    border: 0px;
+    width: 300px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+  }
+}

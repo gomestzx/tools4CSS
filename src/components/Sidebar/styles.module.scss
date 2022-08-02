@@ -32,27 +32,27 @@
   .textLogo {
     h1 {
       background: linear-gradient(-45deg, #096ffe, #096ffe, #fff, #f2f4f6);
-    background-size: 300%;
-    font-weight: 900;
-    font-size: 40px;
-    letter-spacing: -3px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animated_text 10s ease-in-out infinite;
-    -moz-animation: animated_text 10s ease-in-out infinite;
-    -webkit-animation: animated_text 10s ease-in-out infinite;
-    text-align: center;
-    @keyframes animated_text {
-      0% {
-        background-position: 0px 50%;
+      background-size: 300%;
+      font-weight: 900;
+      font-size: 40px;
+      letter-spacing: -3px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animated_text 10s ease-in-out infinite;
+      -moz-animation: animated_text 10s ease-in-out infinite;
+      -webkit-animation: animated_text 10s ease-in-out infinite;
+      text-align: center;
+      @keyframes animated_text {
+        0% {
+          background-position: 0px 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0px 50%;
+        }
       }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0px 50%;
-      }
-    }
     }
   }
 
@@ -105,7 +105,9 @@
     font-size: 18px;
     line-height: 27px;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
     text-align: center;
     padding: 8px 50px;
   }

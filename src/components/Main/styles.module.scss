@@ -13,7 +13,9 @@
       font-weight: 900;
       font-size: 5vw;
       letter-spacing: -2px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI,
+        Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: animated_text 10s ease-in-out infinite;
