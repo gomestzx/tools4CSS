@@ -11,7 +11,7 @@ export default function Main() {
   const [color, setColor] = useState<string>('#096FFE');
 
   const Redirect = () => {
-    router.push('/tools/neumorphism');
+    router.push('/tools/text-gradient');
   };
 
   interface IHexToRGBA {
@@ -51,9 +51,9 @@ export default function Main() {
         </h1>
         <div
           className={style.content}
-          style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}
+          
         >
-          <p onClick={() => Redirect()}>Try it for free 🚀</p>
+          <p onClick={() => Redirect()} style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}>Try it for free 🚀</p>
         </div>
       </div>
 

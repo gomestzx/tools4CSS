@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import style from './styles.module.scss';
-import { Slider } from '@material-ui/core';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Switch from 'react-switch';
 
 const TextGradiemt = () => {
-  const [color1, setColor1] = useState<string>('#12C2E9');
-  const [color2, setColor2] = useState<string>('#d954c8');
-  const [background, setBackground] = useState<string>('#f2f4f6')
-  const [direction, setDirection] = useState<string>('to top')
+  const [color1, setColor1] = useState<string>('#00d0ff');
+  const [color2, setColor2] = useState<string>('#ff00dd');
+  const [direction, setDirection] = useState<string>('-80deg');
+  const [animated, setAnimated] = useState(false);
   const [text, setText] = useState<string>('COPY');
   const Copy = () => {
     setText('COPIED 🎉');
@@ -16,18 +16,27 @@ const TextGradiemt = () => {
     }, 2500);
   };
 
+  const handleChange = (
+    nextChecked: boolean | ((prevState: boolean) => boolean),
+  ) => {
+    setAnimated(nextChecked);
+    setDirection('-80deg');
+  };
+
   return (
-    <div className={style.app}  style={{backgroundColor: `${background}`}}>
+    <div className={style.app}>
       <div className={style.background}>
         <div className={style.container}>
           <h1
-            className={style.textGradient}
+            className={`${animated ? style.animated : style.textGradient}  `}
             style={{
               WebkitTextFillColor: 'transparent',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
               backgroundClip: 'text',
-              background: `linear-gradient(${direction}, ${color1}, ${color2})`,
+              background: `linear-gradient(${direction}, ${color1}, ${
+                animated ? color1 + ',' : ''
+              } ${color2} ${animated ? ',' + color2 : ''})`,
             }}
           >
             Tools4CSS
@@ -38,6 +47,7 @@ const TextGradiemt = () => {
         <div className={style.controls}>
           <div>
             <div className={style.label}>
+              {color1}
               <span>Color 1</span>
             </div>
             <input
@@ -48,6 +58,7 @@ const TextGradiemt = () => {
           </div>
           <div>
             <div className={style.label}>
+              {color2}
               <span>Color 2</span>
             </div>
             <input
@@ -56,35 +67,89 @@ const TextGradiemt = () => {
               value={color2}
             />
           </div>
-          <div>
-            <div className={style.label}>
-              <span>Background </span>
-            </div>
-            <input
-              type='color'
-              onChange={(e) => setBackground(e.target.value)}
-              value={background}
-            />
-          </div>
+
           <div className={style.directions}>
-          <div className={style.label}>
+            <div className={style.label}>
               <span>Directions </span>
             </div>
-            <button onClick={() => setDirection('to top')}>👆</button>
-            <button onClick={() => setDirection('to bottom')}>👇</button>
-            <button onClick={() => setDirection('to left')}>👈</button>
-            <button onClick={() => setDirection('to right')}>👉</button>
+            {animated ? (
+              <></>
+            ) : (
+              <>
+                {' '}
+                <button onClick={() => setDirection('180deg')}>👆</button>
+                <button onClick={() => setDirection('380deg')}>👇</button>
+              </>
+            )}
+
+            <button onClick={() => setDirection('80deg')}>👈</button>
+            <button onClick={() => setDirection('-80deg')}>👉</button>
+          </div>
+
+          <div>
+            <div className={style.label}>
+              <span>Animation</span>
+            </div>
+            <div className={style.Icheckbox}>
+              <Switch
+                checked={animated}
+                onChange={handleChange}
+                className={style.checkbox}
+                onColor='#86d3ff'
+                onHandleColor='#0F54B4'
+                handleDiameter={30}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                offColor='#ffffff'
+                offHandleColor='#0F54B4'
+                activeBoxShadow='0px 0px 1px 10px rgba(0, 0, 0, 0.2)'
+                height={20}
+                width={48}
+                id='material-switch'
+              />
+              {animated ? (
+                <div className={style.label}>
+                  <span> Use SCSS ⚠️</span>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
         </div>
         <div className={style.cssCopy}>
           <textarea
             className={style.textarea}
-            value={`background: -webkit-linear-gradient(${direction}, ${color1}, ${color2});\nbackground: linear-gradient(to right, ${color1}, ${color2});\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;`}
+            value={`background: linear-gradient(${direction}, ${color1}, ${
+              animated ? color1 + ',' : ''
+            } ${color2}${
+              animated ? ', ' + color2 : ''
+            });\nbackground: -webkit-linear-gradient(${direction}, ${color1}, ${
+              animated ? color1 + ',' : ''
+            } ${color2}${
+              animated ? ', ' + color2 : ''
+            });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
+              animated
+                ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '
+                : ''
+            }`}
             readOnly
           ></textarea>
           <br />
           <CopyToClipboard
-            text={`background: -webkit-linear-gradient(${direction}, ${color1}, ${color2});\nbackground: linear-gradient(to right, ${color1}, ${color2});\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;`}
+            text={`background: linear-gradient(${direction}, ${color1}, ${
+              animated ? color1 + ',' : ''
+            } ${color2}${
+              animated ? ', ' + color2 : ''
+            });\nbackground: -webkit-linear-gradient(${direction}, ${color1}, ${
+              animated ? color1 + ',' : ''
+            } ${color2}${
+              animated ? ', ' + color2 : ''
+            });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
+              animated
+                ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '
+                : ''
+            }`}
           >
             <button onClick={() => Copy()}>{text}</button>
           </CopyToClipboard>

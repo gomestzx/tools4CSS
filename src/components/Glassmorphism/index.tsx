@@ -89,6 +89,7 @@ const Glassmorphism = () => {
           <div className={style.flexColor}>
             <div>
               <div className={style.label}>
+                {color}
                 <span>Color</span>
               </div>
               <input

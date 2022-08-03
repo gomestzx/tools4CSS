@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Modal from 'react-modal';
-import Sidebar from '../Sidebar';
 import style from './styles.module.scss';
 
 export function Links() {

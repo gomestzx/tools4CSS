@@ -21,3 +21,10 @@ a {
   display: grid;
   grid-template-columns: 10% 90%;
 }
+
+textarea::-webkit-scrollbar {
+  width: 1em;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #0f54b4;
+}

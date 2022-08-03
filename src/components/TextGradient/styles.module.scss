@@ -25,6 +25,32 @@
   }
 }
 
+.animated {
+  font-size: 75px;
+  margin: 10px;
+  -webkit-background-clip: text !important;
+  @media screen and (max-width: 840px) {
+    font-size: 55px;
+  }
+  background-size: 300% !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 10s ease-in-out infinite;
+  -moz-animation: animated_text 10s ease-in-out infinite;
+  -webkit-animation: animated_text 10s ease-in-out infinite;
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0px 50%;
+    }
+  }
+}
+
 .controls {
   background-color: #438dfc;
   padding: 20px;
@@ -59,6 +85,13 @@
     border-radius: 15px;
     border: none;
   }
+  .Icheckbox {
+    display: flex;
+    align-items: center;
+  }
+  .checkbox {
+    margin: 5px 10px 0px 0px;
+  }
 }
 
 .slider {
@@ -73,7 +106,7 @@
 
   .textarea {
     width: 300px;
-    height: 140px;
+    height: 160px;
     background-color: #fff;
     color: #096ffe;
     font-weight: 600;
@@ -82,7 +115,11 @@
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-size: 12px;
+    ::-webkit-scrollbar {
+      color: #000;
+    }
   }
+  
   button {
     background-color: #0f54b4;
     border: 0px;
