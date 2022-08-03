@@ -6,8 +6,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
 const Glassmorphism = () => {
-  const [blur, setBlur] = useState<number>(6);
-  const [color, setColor] = useState<string>('#f2f4f6');
+  const [blur, setBlur] = useState<number>(3);
+  const [color, setColor] = useState<string>('#8ed1fc');
   const [trasnparency, setTransparency] = useState<number>(0.15);
   const [text, setText] = useState<string>('COPY');
   const Copy = () => {

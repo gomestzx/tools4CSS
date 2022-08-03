@@ -19,6 +19,5 @@ a {
 
 .grid {
   display: grid;
-  width: 500px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 10% 90%;
 }

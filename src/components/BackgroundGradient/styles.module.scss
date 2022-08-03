@@ -3,10 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80vw;
-  @media only screen and (max-width: 1250px) {
-    width: 100vw;
-  }
+  width: 100vw;
+  
 
   .flex {
     display: flex;
