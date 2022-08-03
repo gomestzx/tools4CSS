@@ -58,6 +58,13 @@ export default function Main() {
       </div>
 
       <div className={style.row}>
+        <div className={style.textMobile}>
+          <h2>
+            Build great designs
+            <br />
+            with our tools
+          </h2>
+        </div>
         <div className={style.mainImg}>
           <div className={style.background}>
             <div
