@@ -109,12 +109,20 @@ const BackgroundGradient = () => {
         <div className={style.cssCopy}>
           <textarea
             className={style.textarea}
-            value={`background-image: linear-gradient(${direction}, ${color1}, ${color2});\nbackground-size: 400% 400%;\nanimation: gradient 15s ease infinite;\nheight: 100vh;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; } }`}
+            value={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
+              animated
+                ? '\nbackground-size: 400% 400%;\nanimation: gradient 15s ease infinite;\nheight: 100vh;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
+                : ''
+            } `}
             readOnly
           ></textarea>
           <br />
           <CopyToClipboard
-            text={`background-image: linear-gradient(${direction}, ${color1}, ${color2});\nbackground-size: 400% 400%;\nanimation: gradient 15s ease infinite;\nheight: 100vh;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; } }`}
+            text={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
+              animated
+                ? '\nbackground-size: 400% 400%;\nanimation: gradient 15s ease infinite;\nheight: 100vh;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
+                : ''
+            } `}
           >
             <button onClick={() => Copy()}>{text}</button>
           </CopyToClipboard>

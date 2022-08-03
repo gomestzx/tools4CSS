@@ -3,6 +3,7 @@ import style from './styles.module.scss';
 import React, { useEffect, useState } from 'react';
 import { Slider } from '@material-ui/core';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 //#623cea
 export default function Main() {
@@ -41,6 +42,7 @@ export default function Main() {
   const g = hexToRgb(color)?.g;
   const b = hexToRgb(color)?.b;
   return (
+    <>
     <div className={style.container}>
       <div className={style.row}>
         <h1>
@@ -94,6 +96,14 @@ export default function Main() {
           <label>Change the color 👆</label>
         </div>
       </div>
+      
     </div>
+    <div className={style.footer}>
+        Made with ❤️ by
+        <span>
+          <Link href='https://gomestzx.github.io'> gomestzx</Link>
+        </span>
+      </div>
+    </>
   );
 }

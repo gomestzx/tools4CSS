@@ -14,16 +14,10 @@ export default function HeaderApp() {
       </label>
       <ul className={styles.menu}>
         <li>
-          <Link href='/tools/neumorphism'>Tools</Link>
+          <Link href='/tools/text-gradient'>Tools</Link>
         </li>
         <li>
-          <Link href='#about'>About</Link>
-        </li>
-        <li>
-          <Link href='#blog'>Blog</Link>
-        </li>
-        <li>
-          <Link href='#contact'>Contact</Link>
+          <Link href='mailto:felipematheusdev@gmail.com'>Contact</Link>
         </li>
       </ul>
     </header>

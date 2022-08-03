@@ -186,3 +186,20 @@
     }
   }
 }
+
+.footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: #A7A4A4;
+  font-weight: 500;
+  @media screen and (max-width: 723px) {
+    position:inherit;
+    margin: 10px 0px;
+  }
+  span {
+    color: #1363df;
+  }
+}
