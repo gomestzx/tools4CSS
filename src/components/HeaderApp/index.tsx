@@ -6,7 +6,7 @@ export default function HeaderApp() {
   return (
     <header className={styles.header}>
       <a className={styles.logo}>
-        <Image src='/logo.png' alt='' width={190} height={60} />
+        <h1>Tools4CSS</h1>
       </a>
       <input className={styles.menuBtn} type='checkbox' id='menu-btn' />
       <label className={styles.menuIcon} htmlFor='menu-btn'>

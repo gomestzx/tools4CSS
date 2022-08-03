@@ -53,7 +53,7 @@ export default function Main() {
           className={style.content}
           style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}
         >
-          <p onClick={() => Redirect()}>Try it for free</p>
+          <p onClick={() => Redirect()}>Try it for free 🚀</p>
         </div>
       </div>
 

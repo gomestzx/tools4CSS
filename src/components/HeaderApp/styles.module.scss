@@ -28,9 +28,32 @@
   .logo {
     display: block;
     float: left;
-    font-size: 2em;
     text-decoration: none;
     margin-top: 10px;
+    h1 {
+      background: linear-gradient(-80deg,  #096ffe, #096ffe, #b23fe0, #ff00dd);
+      background-size: 300%;
+      font-weight: 900;
+      font-size: 40px;
+      letter-spacing: -1.2px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animated_text 10s ease-in-out infinite;
+      -moz-animation: animated_text 10s ease-in-out infinite;
+      -webkit-animation: animated_text 10s ease-in-out infinite;
+      margin: 0;
+      @keyframes animated_text {
+        0% {
+          background-position: 0px 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0px 50%;
+        }
+      }
+    }
   }
   .menu {
     clear: both;
@@ -41,7 +64,7 @@
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 40px 20px;
+    padding: 39px 20px;
     position: relative;
     user-select: none;
     .navicon {

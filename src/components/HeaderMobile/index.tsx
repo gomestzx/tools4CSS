@@ -64,7 +64,7 @@ export default function HeaderMobile() {
 
   return (
     <div className={style.headerMobile}>
-      <button onClick={() => setModal(true)} className={style.btnOpen}>see tools</button>
+      <button onClick={() => setModal(true)} className={style.btnOpen}>see tools 🦄</button>
       
 
       {modal ? (
