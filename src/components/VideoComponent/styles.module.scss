@@ -1,0 +1,26 @@
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+  h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgb(167, 164, 164);
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  video {
+    border-radius: 12px;
+    @media screen and (max-width: 880px) {
+      width: 90%;
+      height: auto;
+    }
+    width: 63.5%;
+    max-width: auto;
+    height: auto;
+  }
+}

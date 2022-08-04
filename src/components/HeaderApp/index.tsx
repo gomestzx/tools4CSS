@@ -14,10 +14,14 @@ export default function HeaderApp() {
       </label>
       <ul className={styles.menu}>
         <li>
-          <Link href='/tools/text-gradient'>Tools</Link>
+          <Link href='#works'>How it works?</Link>
         </li>
         <li>
-          <Link href='mailto:felipematheusdev@gmail.com'>Contact</Link>
+          <Link href='/tools/text-gradient'>Tools</Link>
+        </li>
+
+        <li>
+          <Link href='mailto:hi@tools4css.com'>Contact</Link>
         </li>
       </ul>
     </header>
