@@ -50,26 +50,18 @@ export function Links() {
 export default function HeaderMobile() {
   const [modal, setModal] = useState<boolean>(false);
 
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
-
   return (
     <div className={style.headerMobile}>
-      <button onClick={() => setModal(true)} className={style.btnOpen}>see tools 🦄</button>
-      
+      <button onClick={() => setModal(true)} className={style.btnOpen}>
+        Tools 🛠️
+      </button>
 
       {modal ? (
         <>
           <Modal isOpen={modal} className={style.modal}>
-            <button className={style.btnClose} onClick={() => setModal(false)}>X</button>
+            <button className={style.btnClose} onClick={() => setModal(false)}>
+              Close 👋
+            </button>
             <Links />
           </Modal>
         </>

@@ -16,11 +16,20 @@
   video {
     border-radius: 12px;
     @media screen and (max-width: 880px) {
-      width: 90%;
-      height: auto;
+      display: none;
     }
     width: 63.5%;
     max-width: auto;
     height: auto;
+  }
+  .gif {
+    display: none;
+    margin: 0px 12px;
+    @media screen and (max-width: 880px) {
+      display: block;
+    }
+    img {
+      border-radius: 12px;
+    }
   }
 }
