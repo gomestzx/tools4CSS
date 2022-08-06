@@ -10,7 +10,10 @@ import { SEO } from '../components/SEO';
 const Home: NextPage = () => {
   return (
     <>
-      <SEO title='Home' />
+      <SEO
+        shouldExcludeTitleSuffix
+        title='Tools4CSS'
+      />
       <HeaderApp />
       <Main />
       <VideoComponent />
