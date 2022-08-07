@@ -12,7 +12,7 @@ const VideoComponent = () => {
         <source src="/review.mp4" />
       </video>
       <div className={styles.gif}>
-        <Image src='/review.gif' width={1280} height={720} alt='review'/>
+        <Image src='/review.gif' width={1280} height={650} alt='reviewn'/>
       </div>
       
        

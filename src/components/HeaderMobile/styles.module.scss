@@ -1,6 +1,6 @@
 .headerMobile {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   @media only screen and (min-width: 1250px) {
     display: none;
   }
@@ -94,7 +94,7 @@
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.btnClose { 
+.btnClose {
   border: 0;
   font-size: 16px;
   margin: 10px;
