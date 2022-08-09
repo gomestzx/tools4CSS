@@ -118,7 +118,7 @@ const Claymorphism = () => {
           ></textarea>
           <br />
           <CopyToClipboard
-            text={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nrgba(255, 255, 255, ${trasnparency}); box-shadow: 35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);`}
+            text={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(255, 255, 255, ${trasnparency}); box-shadow: 35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);`}
           >
             <button onClick={() => Copy()}>{text}</button>
           </CopyToClipboard>
